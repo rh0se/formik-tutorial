@@ -1,4 +1,5 @@
 import { useFormik } from "formik";
+import { basicSchema } from "../schemas";
 
 const BasicForm = () => {
   const { values, handleChange, handleBlur } = useFormik(
@@ -8,9 +9,9 @@ const BasicForm = () => {
         password: "",
         confirmPassword: "",
        },
+       validationSchema: basicSchema,
     }
   );
-  console.log(formik)
   return (
     <form autoComplete="off">
       <label htmlFor="email">Email</label>
