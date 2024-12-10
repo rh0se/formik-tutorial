@@ -1,11 +1,18 @@
-import { Formik, Form, Field } from "formik"
+import { Formik, Form, Field } from "formik";
+import CustomInput from "./Custominput";
 
 const AdvancedForm = () => {
   return (
-    <Formik initialValues={{ name: 'jared' }}>
+    <Formik initialValues={{ username: 'jared' }}>
     {props => (
       <Form onSubmit={props.handleSubmit}>
-           <Field type="text" name="name" placeholder="Name" />
+        <CustomInput 
+          label="Username"
+          name="username"
+          type="text"
+          placeholder= "Enter your username"
+        />
+    
     {/* <input
           type="text"
           onChange={props.handleChange}
