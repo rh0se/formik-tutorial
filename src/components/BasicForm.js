@@ -1,4 +1,7 @@
+import { useFormik } from "formik";
+
 const BasicForm = () => {
+  const formik = useFormik();
   return (
     <form autoComplete="off">
       <label htmlFor="email">Email</label>
